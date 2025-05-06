@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search App</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vineethtrv/css-loader@master/css/css-loader.css" />
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+</head>
+<body>
+  <form id="search-form">
+    <input type="text" name="searchQuery" placeholder="Search images..." required />
+    <button type="submit">Search</button>
+  </form>
 
-    <load src="./partials/footer.html" />
+<div id="gallery" class="gallery"></div>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+<div id="loader" class="loader loader-circle hidden">Loading images, please wait...</div>
+
+<!-- "Load more" butonu - container içinde ortalanacak -->
+<div class="load-more-container">
+  <button class="load-more hidden">Load more</button>
+</div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>
